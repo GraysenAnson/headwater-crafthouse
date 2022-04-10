@@ -1,15 +1,20 @@
 import React from "react";
 
-export const Card = (props: any) => (
+const Card = (props: any) => (
   <div className="card-continer">
-    {/* <a
-      href={`${props.}`}
-      target="_blank"
-      rel="noreferrer"
-    > */}
-    <img alt="Sale Items" src={`${props.items.Image}`} />
-    <h2>{props.items.beer_name + " -- " + props.items.business_name}</h2>
-    {/* </a> */}
+    <h2>
+      {props.items.beer_name +
+        " -- " +
+        props.items.business_name +
+        "-" +
+        props.items.State}
+    </h2>
+    <img alt={props.items.beer_name} src={`${props.items.Image}`} />
+    <p>
+      ABV - {props.items.ABV} IBU - {props.items.IBU} Price -{" "}
+      {props.items.Price}/{props.items.oz}oz
+    </p>
+    <p></p>
   </div>
 );
 

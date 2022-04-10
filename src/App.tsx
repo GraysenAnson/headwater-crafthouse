@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import inv from "./crafthouseData/craftHouse.json";
-import Card from "./components/Card/Card";
 import { CardList } from "./components/Card List/cardList";
 
 function App() {
@@ -11,7 +9,6 @@ function App() {
     <div>
       Test
       <CardList item={item} />
-      {/* <Card item={item} /> */}
     </div>
   );
 }
