@@ -9,7 +9,7 @@ const Card = (props: any) => (
         "-" +
         props.items.State}
     </h2>
-    <img alt={props.items.beer_name} src={`${props.items.Image}`} />
+    <img alt={props.items.beer_name} src={``} />
     <p>
       ABV - {props.items.ABV} IBU - {props.items.IBU} Price -{" "}
       {props.items.Price}/{props.items.oz}oz
