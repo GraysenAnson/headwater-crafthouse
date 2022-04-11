@@ -18,11 +18,8 @@ export const CardContainer = (props: any) =>
       categoryObj.push(inv.Category);
     }
 
-    if (categoryObj[num] === inv.Category) {
-        num++;
-    } 
-
     //Set Category to Header component
+    //Set first cardList object, as it would bypass first object in first render.
     if (categoryObj[cNum] === inv.Category) {
       cNum++;
       return (
@@ -33,6 +30,7 @@ export const CardContainer = (props: any) =>
       );
     }
     
+    //Second render of object will paste the next values
     return (
       <div key={inv.beer_name}>
         <CardList key={inv.order} items={inv} />
