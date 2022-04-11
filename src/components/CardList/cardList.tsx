@@ -4,6 +4,6 @@ import Card from "../Card/Card";
 
 export const CardList = (props: any) => (
   <div>
-    <Card items={props.items}></Card>
+    <Card key={props.items.Arr_ID} items={props.items}></Card>
   </div>
 );

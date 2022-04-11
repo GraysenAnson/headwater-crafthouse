@@ -4,8 +4,7 @@ import { CardList } from "../CardList/cardList";
 
 let num = 0;
 let cNum = 0;
-let categoryObj: any = [];
-let invObj: any = [];
+const categoryObj: any = [];
 
 export const CardContainer = (props: any) =>  
   props.item.map((inv: any) => {
@@ -27,16 +26,16 @@ export const CardContainer = (props: any) =>
     if (categoryObj[cNum] === inv.Category) {
       cNum++;
       return (
-        <div key={inv.ID}>
-          <CategoryHeader key={cNum} items={inv} />
-          <CardList key={inv.ID} items={inv} />
+        <div key={inv.Category}>
+          <CategoryHeader key={inv.business_name} items={inv} />
+          <CardList key={inv.Arr_ID} items={inv} />
         </div>
       );
     }
     
     return (
-      <div>
-        <CardList key={inv.ID} items={inv} />
+      <div key={inv.beer_name}>
+        <CardList key={inv.order} items={inv} />
       </div>
     );
   });

@@ -9,7 +9,7 @@ function App() {
   const [item, setItem] = useState(inv);
   return (
     <div>
-      Test
+      Craft House App
       <CardContainer item={item} />
     </div>
   );
