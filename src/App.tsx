@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
 import inv from "./crafthouseData/craftHouse.json";
-import { CardList } from "./components/Card List/cardList";
+import { CardList } from "./components/CardList/cardList";
+import { CategoryHeader } from "./components/CategoryHeader/categoryHeader";
+import { CardContainer } from "./components/CardContainer/cardContainer";
 
 function App() {
   const [item, setItem] = useState(inv);
   return (
     <div>
       Test
-      <CardList item={item} />
+      <CardContainer item={item} />
     </div>
   );
 }
