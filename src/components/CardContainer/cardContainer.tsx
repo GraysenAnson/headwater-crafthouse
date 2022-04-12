@@ -28,11 +28,11 @@ export const CardContainer = (props: any) =>
         </div>
       );
     } else {
-    //Second render of object will paste the next values
-    return (
-      <div key={inv.beer_name}>
-        <CardList key={inv.order} items={inv} />
-      </div>
-    );
+      //Second render of object will paste the next values
+      return (
+        <div key={inv.beer_name}>
+          <CardList key={inv.order} items={inv} />
+        </div>
+      );
     }
   });
