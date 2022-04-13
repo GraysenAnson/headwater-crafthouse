@@ -1,5 +1,7 @@
 .navigation-btn{
     position: fixed;
+    right: 2rem;
+    bottom: 2rem;
 }
 .navigation-image{
     width: 25%;
