@@ -19,6 +19,7 @@ export const CategoryHeader = (props: ItemProp) => {
         </div>
       );
     }
+    return (false);
   });
   return (
     <div className="category-header-container">
