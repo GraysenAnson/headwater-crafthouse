@@ -2,13 +2,15 @@ import React from "react";
 
 const Card = (props: any) => (
   <div className="card-continer">
-    <h2>
-      {props.items.beer_name +
+    <h3>
+      {props.items.ID +
+        " " +
+        props.items.beer_name +
         " -- " +
         props.items.business_name +
         "-" +
         props.items.State}
-    </h2>
+    </h3>
     <img alt={props.items.beer_name} src={``} />
     <p>
       ABV - {props.items.ABV} IBU - {props.items.IBU} Price -{" "}

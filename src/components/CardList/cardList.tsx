@@ -2,8 +2,15 @@ import React from "react";
 import Card from "../Card/Card";
 // import "./card-list.style.css";
 
-export const CardList = (props: any) => (
-  <div>
-    <Card key={props.items.Arr_ID} items={props.items}></Card>
-  </div>
-);
+export const CardList = (props: any) => {
+  // console.log(props.items);
+  const invItems = props.items.map((inv: any) => {
+    console.log(inv);
+    return (
+      <div>
+        <Card items={inv}></Card>
+      </div>
+    );
+  });
+  return <div>{invItems}</div>;
+};
