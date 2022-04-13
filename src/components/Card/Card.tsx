@@ -20,7 +20,6 @@ const Card = (props: CardProps) => (
     <p>
       ABV - {props.item.ABV} IBU - {props.item.IBU} Price - {props.item.Price}/{props.item.oz}oz
     </p>
-    <p></p>
   </div>
 );
 
