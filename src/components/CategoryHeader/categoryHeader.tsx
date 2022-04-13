@@ -4,7 +4,6 @@ import { ItemProp, InvItem } from "../Interfaces/interfaces";
 
 export const CategoryHeader = (props: ItemProp) => {
   const categoryObj: String[] = [];
-  console.log();
   const categorySorter = props.item.map((inv: InvItem) => {
     //Store unique categories, filter by category to return inventory items.
     if (categoryObj.indexOf(inv.Category) === -1) {
