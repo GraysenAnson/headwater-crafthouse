@@ -1,20 +1,24 @@
 import React from "react";
-import { ItemProp, InvItem } from "../Interfaces/interfaces";
+import { InvItem } from "../Interfaces/interfaces";
 
-const Card = (props: InvItem) => (
+interface CardProps {
+  item: InvItem | undefined;
+}
+ 
+const Card = (props: CardProps) => (
   <div className="card-continer">
     <h3>
-      {props.ID +
+      {props.item.ID +
         " " +
-        props.beer_name +
+        props.item.beer_name +
         " -- " +
-        props.business_name +
+        props.item.business_name +
         "-" +
-        props.State}
+        props.item.State}
     </h3>
-    <img alt={props.beer_name} src={``} />
+    <img alt={props.item.beer_name} src={``} />
     <p>
-      ABV - {props.ABV} IBU - {props.IBU} Price - {props.Price}/{props.oz}oz
+      ABV - {props.item.ABV} IBU - {props.item.IBU} Price - {props.item.Price}/{props.item.oz}oz
     </p>
     <p></p>
   </div>
