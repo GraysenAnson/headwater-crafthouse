@@ -2,7 +2,7 @@ import React from "react";
 import { InvItem } from "../Interfaces/interfaces";
 
 interface CardProps {
-  item: InvItem | undefined;
+  item: InvItem;
 }
  
 const Card = (props: CardProps) => (
