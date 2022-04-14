@@ -1,8 +1,8 @@
 import React from "react";
-import Classes from "../../styles/back-to-top.module.css";
+import "../../styles/back-to-top.css";
 
 export const BackToTop = () => (
-  <div className={Classes["navigation-btn"]}>
+  <div className="navigation-btn">
     <a href="#">
       <img
         className="navigation-image"
