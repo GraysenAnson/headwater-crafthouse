@@ -27,3 +27,13 @@ export const CategoryHeader = (props: ItemProp) => {
     </div>
   );
 };
+
+export const SortedCategoryHeader = (props: ItemProp) => {
+  console.log("pass?");
+  const categoryItems = props.item.map((inv: InvItem) => {
+    return false;
+  });
+  return (<div>
+
+  </div>);
+};
