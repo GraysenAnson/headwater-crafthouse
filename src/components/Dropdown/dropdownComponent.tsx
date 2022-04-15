@@ -3,6 +3,7 @@ import { ItemProp, InvItem } from "../Interfaces/interfaces";
 import Dropdown from "react-bootstrap/Dropdown";
 import { DropdownButton } from "react-bootstrap";
 import {CategoryHeader, SortedCategoryHeader} from "../CategoryHeader/categoryHeader";
+import { CardContainer } from "../CardContainer/cardContainer";
 
 export const DropdownComponent = (props: ItemProp) => {
   const categoryObj: String[] = [];
@@ -14,14 +15,9 @@ export const DropdownComponent = (props: ItemProp) => {
     return a.Order - b.Order;
   });
 
-  const handleSelect=(e: any)=>{
-    console.log(e);
+  //Any is not an acceptible type for "e" and needs to be replaced.
+  const handleSelect=(e: any) =>{
     setValue(e);
-    if (e !== "All") {
-      // <SortedCategoryHeader item={props.item}/>
-    } else {
-      // return (<CategoryHeader item={orderSort} />);
-    }
   };
   
   const sortedCategory = orderSort.map((inv: InvItem) => {
@@ -32,11 +28,24 @@ export const DropdownComponent = (props: ItemProp) => {
     return false;
   });
 
-  if(value !== "") {
-    return (<SortedCategoryHeader item={orderSort.filter(
-      (x: InvItem) => x.Category === value
-    )} />);
-  }
+  function setInventoryValues(val: string) {
+    const elem = document.getElementById("cardContainer");
+    if(elem && elem.parentNode) {
+      //Somewhat works. Needs improvements
+      elem.parentNode.removeChild(elem);
+    }
+    console.log(val);
+    if(val === "All") {
+      return (<CardContainer item={orderSort}/>);
+    } else if(val !== ""){
+      return (<CardContainer item={orderSort.filter(
+        (x: InvItem) => x.Category === val
+      )} />);
+    } else {
+      console.log("I'm empty loaded");
+    }
+  };
+  
 
   return (
     <div>
@@ -44,7 +53,7 @@ export const DropdownComponent = (props: ItemProp) => {
       <Dropdown.Item value="All" eventKey="All">All</Dropdown.Item>
         {sortedCategory}
       </DropdownButton>
-      {/* <CategoryHeader item={orderSort} /> */}
+      {setInventoryValues(value)}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { ItemProp, InvItem } from "../Interfaces/interfaces";
 
 export const CategoryHeader = (props: ItemProp) => {
   const categoryObj: String[] = [];
-  const categorySorter = props.item.map((inv: InvItem) => {
+  const categorySorter = props.item.map((inv: InvItem)=> {
     //Store unique categories, filter by category to return inventory items.
     if (categoryObj.indexOf(inv.Category) === -1) {
       categoryObj.push(inv.Category);
@@ -23,17 +23,14 @@ export const CategoryHeader = (props: ItemProp) => {
   });
   return (
     <div className="category-header-container">
-      <h1>{categorySorter}</h1>
+      {categorySorter}
     </div>
   );
 };
 
 export const SortedCategoryHeader = (props: ItemProp) => {
-  console.log("pass?");
-  const categoryItems = props.item.map((inv: InvItem) => {
-    return false;
-  });
   return (<div>
-
+    <h1>Header</h1>
+  <CardList item={props.item} />
   </div>);
 };
