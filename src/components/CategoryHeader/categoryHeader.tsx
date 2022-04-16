@@ -23,11 +23,3 @@ export const CategoryHeader = (props: ItemProp) => {
   });
   return <div className="category-header-container">{categorySorter}</div>;
 };
-
-export const SortedCategoryHeader = (props: ItemProp) => {
-  return (
-    <div>
-      <CardList item={props.item} />
-    </div>
-  );
-};

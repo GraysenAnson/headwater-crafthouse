@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import { ItemProp, InvItem } from "../Interfaces/interfaces";
 import Dropdown from "react-bootstrap/Dropdown";
 import { DropdownButton } from "react-bootstrap";
-import {
-  CategoryHeader,
-  SortedCategoryHeader,
-} from "../CategoryHeader/categoryHeader";
-import {
-  CardContainer,
-  SortedCardContainer,
-} from "../CardContainer/cardContainer";
+import { SortedCardContainer } from "../CardContainer/cardContainer";
 
 export const DropdownComponent = (props: ItemProp) => {
   const categoryObj: String[] = [];
@@ -39,9 +32,6 @@ export const DropdownComponent = (props: ItemProp) => {
   function setInventoryValues(val: string) {
     const elem = document.getElementById("cardContainer");
     if (elem) {
-      //Somewhat works. Needs improvements
-      // elem.parentNode.removeChild(elem);
-      console.log(val);
       if (val === "All") {
         elem.hidden = false;
       } else if (val !== "") {
