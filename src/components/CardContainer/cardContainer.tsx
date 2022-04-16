@@ -11,8 +11,16 @@ export const CardContainer = (props: ItemProp) => {
     return a.Order - b.Order;
   });
   return (
-    <div id="cardContainer"> 
+    <div id="cardContainer">
       <CategoryHeader item={orderSort} />
+    </div>
+  );
+};
+
+export const SortedCardContainer = (props: ItemProp) => {
+  return (
+    <div id="sortedCardContainer">
+      <CategoryHeader item={props.item} />
     </div>
   );
 };
