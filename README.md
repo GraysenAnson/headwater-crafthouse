@@ -1,6 +1,6 @@
 ![Headwater](https://149530104.v2.pressablecdn.com/wp-content/uploads/2021/01/HC-stacked-color-logo.png)
 ___
-# Headwater Crafthouse React/Typescript
+# Headwaters Crafthouse React/Typescript
 
 ---
 ---
@@ -24,5 +24,5 @@ I made this project to help me get into the mindset of a React developer and use
 
 ---
 #### Data
-Data was manually taken from [Headwater CraftHouse](https://headwaterscrafthouse.com/) website. Navigate to the **On Tap Now** button in the navi section of the website.
+Data was manually taken from [Headwaters CraftHouse](https://headwaterscrafthouse.com/) website. Navigate to the **On Tap Now** button in the navi section of the website.
 
